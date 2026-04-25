@@ -24,9 +24,9 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v31
+        uses: DeterminateSystems/nix-installer-action@v22
         with:
-          extra_nix_config: |
+          extra-conf: |
             experimental-features = nix-command flakes
 
       - name: Enable Magic Nix Cache
