@@ -5,6 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
     blueprint.url = "github:numtide/blueprint";
     blueprint.inputs.nixpkgs.follows = "nixpkgs";
+    aspect-cli-src = {
+      url = "github:aspect-build/aspect-cli";
+      flake = false;
+    };
   };
 
   outputs = inputs:

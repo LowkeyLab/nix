@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "aspect-cli-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777073741,
+        "narHash": "sha256-YEWpJ9vmKKDZL8nrSKSdNdYf67ccaFxfOhudE7mF1G0=",
+        "owner": "aspect-build",
+        "repo": "aspect-cli",
+        "rev": "d382791a621cfaec0b43d35cdca488ab26819d2a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aspect-build",
+        "repo": "aspect-cli",
+        "type": "github"
+      }
+    },
     "blueprint": {
       "inputs": {
         "nixpkgs": [
@@ -39,6 +55,7 @@
     },
     "root": {
       "inputs": {
+        "aspect-cli-src": "aspect-cli-src",
         "blueprint": "blueprint",
         "nixpkgs": "nixpkgs"
       }

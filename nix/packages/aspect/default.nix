@@ -1,22 +1,32 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
-pkgs.stdenvNoCC.mkDerivation {
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "aspect";
-  version = "2026.17.17";
+  version = "unstable-${inputs.aspect-cli-src.shortRev or "unknown"}";
 
-  src = pkgs.fetchurl {
-    url = "https://github.com/aspect-build/aspect-cli/releases/download/v2026.17.17/aspect-cli-x86_64-unknown-linux-musl";
-    hash = "sha256-20WWjhFMIq8ODT3drftwkcgZg/Zkme7Z0B14K7CUg9A=";
+  src = inputs.aspect-cli-src;
+
+  cargoLock = {
+    lockFile = "${src}/Cargo.lock";
+    allowBuiltinFetchGit = true;
   };
 
-  dontUnpack = true;
+  cargoBuildFlags = [
+    "--package"
+    "aspect-cli"
+    "--bin"
+    "aspect-cli"
+  ];
 
-  installPhase = ''
-    runHook preInstall
-    mkdir -p "$out/bin"
-    cp "$src" "$out/bin/aspect"
-    chmod +x "$out/bin/aspect"
-    runHook postInstall
+  nativeBuildInputs = [
+    pkgs.pkg-config
+    pkgs.protobuf
+  ];
+
+  buildInputs = [ pkgs.openssl ];
+
+  postInstall = ''
+    mv "$out/bin/aspect-cli" "$out/bin/aspect"
   '';
 
   meta = with pkgs.lib; {
@@ -24,7 +34,7 @@ pkgs.stdenvNoCC.mkDerivation {
     homepage = "https://github.com/aspect-build/aspect-cli";
     license = licenses.asl20;
     platforms = [ "x86_64-linux" ];
-    sourceProvenance = with sourceTypes; [ binaryNativeCode ];
+    sourceProvenance = with sourceTypes; [ fromSource ];
     mainProgram = "aspect";
   };
 }
