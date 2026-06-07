@@ -4,6 +4,8 @@
     "config:recommended",
     ":maintainLockFilesWeekly"
   ],
+  "automerge": true,
+  "platformAutomerge": true,
   "nix": {
     "enabled": true
   },
