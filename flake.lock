@@ -3,11 +3,11 @@
     "aspect-cli-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1782683932,
-        "narHash": "sha256-Et/xe63XcCmMejxuNnI1O8ZRH2x9WHjWcIjOVoagLf8=",
+        "lastModified": 1783206223,
+        "narHash": "sha256-3DZvLcbd7XciKp6yLnzNq6KrWN8FgOvdydSQ1AlZIYs=",
         "owner": "aspect-build",
         "repo": "aspect-cli",
-        "rev": "a53bb4417b62a1d2b6a1729e26a9ea081716152f",
+        "rev": "6a962d8a88f7d3a1d84930a3257938c1509f70ae",
         "type": "github"
       },
       "original": {
@@ -39,11 +39,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1782467914,
-        "narHash": "sha256-pGvFkM8N0xEkIIXDe5YYfbEAvHrk4IxBrjB/x8OomhE=",
+        "lastModified": 1783224372,
+        "narHash": "sha256-8i/87eeoqiGE4yOTjwSA3Eh/ziJRQEmd/unYU+K27sk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e73de5be04e0eff4190a1432b946d469c794e7b4",
+        "rev": "d407951447dcd00442e97087bf374aad70c04cea",
         "type": "github"
       },
       "original": {
