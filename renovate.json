@@ -1,9 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":maintainLockFilesWeekly"
-  ],
+  "extends": ["config:best-practices"],
   "automerge": true,
   "platformAutomerge": true,
   "nix": {
@@ -11,9 +8,7 @@
   },
   "packageRules": [
     {
-      "matchManagers": [
-        "nix"
-      ],
+      "matchManagers": ["nix"],
       "groupName": "nix flake inputs"
     }
   ]
