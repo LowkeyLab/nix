@@ -13,7 +13,7 @@ jobs:
       - uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7
         with:
           persist-credentials: false
-      - uses: "DeterminateSystems/determinate-nix-action@61cbfe2efc2d4e7a8a6d56967c3c1058e846c858" # v3
+      - uses: "DeterminateSystems/determinate-nix-action@668647a33843b1f280cb2ef4c41736f86b29f826" # v3
       - uses: "DeterminateSystems/flakehub-push@abcff4fb351e63f852f5fb2b9af0ae4e69de07d4" # main
         with:
           name: "LowkeyLab/nix"
