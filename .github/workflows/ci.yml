@@ -30,7 +30,7 @@ jobs:
             experimental-features = nix-command flakes
 
       - name: Enable Magic Nix Cache
-        uses: DeterminateSystems/magic-nix-cache-action@55718cd9ebf1737a061487d5ada21abf31e99a98 # main
+        uses: DeterminateSystems/magic-nix-cache-action@2c34ee4e1c462607a30deacae0dfa3ec2032ee79 # main
 
       - name: Run flake checks
         run: nix flake check
