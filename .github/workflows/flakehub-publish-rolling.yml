@@ -14,7 +14,7 @@ jobs:
         with:
           persist-credentials: false
       - uses: "DeterminateSystems/determinate-nix-action@021c8a1bd3570eb21f5c20a054812b0c4d9ca614" # v3
-      - uses: "DeterminateSystems/flakehub-push@f0dd92e3737cfec2b59415bd81f838e50e8fd54e" # main
+      - uses: "DeterminateSystems/flakehub-push@7e685717f0d2fb3efdef17bf73b4e003ff021b2c" # main
         with:
           name: "LowkeyLab/nix"
           rolling: true
