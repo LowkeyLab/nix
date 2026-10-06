@@ -36,6 +36,14 @@ pkgs.rustPlatform.buildRustPackage rec {
 
   inherit cargoDeps;
 
+  postPatch = ''
+    # Upstream's Cargo path override expects the copy normally prepared by
+    # cargo patch-crate. Use the vendored source to keep this step offline.
+    mkdir -p target/patch
+    cp -RL --no-preserve=mode "${cargoDeps}/starlark-0.14.2" target/patch/starlark-0.14.2
+    patch -d target/patch/starlark-0.14.2 -p1 < patches/starlark+0.14.2.patch
+  '';
+
   cargoBuildFlags = [
     "--package"
     "aspect-cli"
@@ -49,6 +57,13 @@ pkgs.rustPlatform.buildRustPackage rec {
   ];
 
   buildInputs = [ pkgs.openssl ];
+
+  nativeCheckInputs = [ pkgs.git ];
+
+  preCheck = ''
+    # CLI integration tests extract builtins into a writable cache.
+    export ASPECT_CLI_CACHE="$TMPDIR/aspect-cli-cache"
+  '';
 
   postInstall = ''
     mv "$out/bin/aspect-cli" "$out/bin/aspect"
