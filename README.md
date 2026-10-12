@@ -16,6 +16,17 @@ In another flake, add this repository as an input and reference:
 
 Consumer repositories should compose their own dev shells or CI environments from these packages.
 
+## Aspect packaging
+
+Rust dependencies are vendored directly from upstream's `Cargo.lock` using
+`buildRustPackage.cargoLock`. Git dependencies retain `allowBuiltinFetchGit` so
+upstream revision updates do not require separate `outputHashes` maintenance.
+Their revisions remain pinned by `Cargo.lock`.
+
+`pkgs.applyPatches` prepares Starlark from the vendored crate and upstream's patch.
+The build stages that result at upstream's required Cargo path override, keeping
+`Cargo.lock` unchanged and patch preparation offline.
+
 ## Repository automation
 
 - CI runs in GitHub Actions on pull requests, pushes to `main`, and manual dispatches.
