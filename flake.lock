@@ -13,6 +13,7 @@
       "original": {
         "owner": "aspect-build",
         "repo": "aspect-cli",
+        "rev": "47a8a9361a646e6839ba202deb318050696bb5a9",
         "type": "github"
       }
     },
@@ -34,6 +35,7 @@
       "original": {
         "owner": "numtide",
         "repo": "blueprint",
+        "rev": "8be75245e274a789b87cc4df542abbcd8c5e7f93",
         "type": "github"
       }
     },
@@ -41,16 +43,15 @@
       "locked": {
         "lastModified": 1790822859,
         "narHash": "sha256-69xHQhAeMAD2wDXO7T2pcOZIF9Sga2W+JkmY2a11Ops=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
         "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
-        "type": "github"
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
       },
       "original": {
-        "owner": "NixOS",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
       }
     },
     "root": {
