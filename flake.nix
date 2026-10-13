@@ -2,11 +2,11 @@
   description = "Shared Nix-packaged CLI tools for Lowkey Lab";
 
   inputs = {
-    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-unstable&rev=c59305bab2065cfecc4944690d9eedbb56f3a9fa";
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-unstable&rev=7fd4004d0511991fff3a0524856a9be09e28c5f0";
     blueprint.url = "github:numtide/blueprint?rev=8be75245e274a789b87cc4df542abbcd8c5e7f93";
     blueprint.inputs.nixpkgs.follows = "nixpkgs";
     aspect-cli-src = {
-      url = "github:aspect-build/aspect-cli?rev=47a8a9361a646e6839ba202deb318050696bb5a9";
+      url = "github:aspect-build/aspect-cli?rev=5a09b7c479084c233bcf554cef3932fe97c71556";
       flake = false;
     };
   };
