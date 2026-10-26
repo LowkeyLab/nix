@@ -6,7 +6,7 @@
     blueprint.url = "github:numtide/blueprint?rev=2bf123541bd5024046f32299c9f8a6cc6bdd8a9f";
     blueprint.inputs.nixpkgs.follows = "nixpkgs";
     aspect-cli-src = {
-      url = "github:aspect-build/aspect-cli?rev=574b5fc496a992f98ec84c93107ddfdb06b5c449";
+      url = "github:aspect-build/aspect-cli?rev=4123eb80825f26e4c6b8120022740f635343810f";
       flake = false;
     };
   };
