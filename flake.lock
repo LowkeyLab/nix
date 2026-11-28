@@ -3,17 +3,17 @@
     "aspect-cli-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1793042052,
-        "narHash": "sha256-nnCHf10wKn+TcQgKoXdTIHAeSX3/SvOCvMvs7Y3U5TM=",
+        "lastModified": 1795812372,
+        "narHash": "sha256-ChPAacDWYNCT3lqIiwMFu9OCx645ixoHTWYqU4On5eM=",
         "owner": "aspect-build",
         "repo": "aspect-cli",
-        "rev": "4123eb80825f26e4c6b8120022740f635343810f",
+        "rev": "d1451301b9cdd97c40a01796e85a289eeb74f1ae",
         "type": "github"
       },
       "original": {
         "owner": "aspect-build",
         "repo": "aspect-cli",
-        "rev": "4123eb80825f26e4c6b8120022740f635343810f",
+        "rev": "d1451301b9cdd97c40a01796e85a289eeb74f1ae",
         "type": "github"
       }
     },
@@ -41,17 +41,17 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1792773339,
-        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
+        "lastModified": 1795546490,
+        "narHash": "sha256-fD1nLSQM8tFob51/thCOr49JIAIjoqybAY27/+hwZQI=",
         "ref": "nixos-unstable",
-        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
-        "revCount": 1100280,
+        "rev": "58d0d3e9d527ca7263be6a45d1f86eacdc700dab",
+        "revCount": 1129576,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
       },
       "original": {
         "ref": "nixos-unstable",
-        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+        "rev": "58d0d3e9d527ca7263be6a45d1f86eacdc700dab",
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
       }
